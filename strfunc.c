@@ -1,11 +1,15 @@
 #include "shell.h"
 
 /**
- * _puts - writes a string to standard output
+ * _puts - Entry Point
+ *
  * @str: string to write
+ *
+ * Description: Writes a string to standard output
  *
  * Return: number of chars printed or -1 on failure
  */
+
 ssize_t _puts(char *str)
 {
 	ssize_t num, len;
@@ -21,15 +25,20 @@ ssize_t _puts(char *str)
 }
 
 /**
- * _strdup - returns pointer to new mem alloc space which contains copy
+ * _strdup - Entry Point
+ *
  * @strtodup: string to be duplicated
+ *
+ * Description: Returns pointer to new mem alloc space which contains copy
+ *
  * Return: a pointer to the new duplicated string
  */
+
 char *_strdup(char *strtodup)
 {
 	char *copy;
 
-		int len, i;
+	int len, i;
 
 	if (strtodup == 0)
 		return (NULL);
@@ -45,11 +54,16 @@ char *_strdup(char *strtodup)
 }
 
 /**
- * _strcmpr - compares two strings
+ * _strcmpr - Entry Point
+ *
  * @strcmp1: first string, of two, to be compared in length
  * @strcmp2: second string, of two, to be compared
+ *
+ * Description: compares two strings
+ *
  * Return: 0 on success, anything else is a failure
  */
+
 int _strcmpr(char *strcmp1, char *strcmp2)
 {
 	int i;
@@ -65,11 +79,16 @@ int _strcmpr(char *strcmp1, char *strcmp2)
 }
 
 /**
- * _strcat - concatenates two strings
+ * _strcat - Entry Point
+ *
  * @strc1: first string
  * @strc2: second string
+ *
+ * Description: Concatenates two strings
+ *
  * Return: pointer
  */
+
 char *_strcat(char *strc1, char *strc2)
 {
 	char *newstring;
@@ -105,10 +124,15 @@ char *_strcat(char *strc1, char *strc2)
 }
 
 /**
- * _strlen - returns the length of a string
+ * _strlen - Entry Point
+ *
  * @str: string to be measured
+ *
+ * Description: Returns the length of a string
+ *
  * Return: length of string
  */
+
 unsigned int _strlen(char *str)
 {
 	unsigned int len;

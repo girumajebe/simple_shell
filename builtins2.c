@@ -1,50 +1,58 @@
 #include "shell.h"
 
 /**
- * add_key - create a new environment variable
- * @vars: pointer to struct of variables
+ * add_key - Entry Point
+ *
+ * @var: pointer to struct of variables
+ *
+ * Description: create a new environment variable
  *
  * Return: void
  */
-void add_key(vars_t *vars)
+
+void add_key(t_var *var)
 {
 	unsigned int i;
 	char **newenv;
 
-	for (i = 0; vars->env[i] != NULL; i++)
+	for (i = 0; var->env[i] != NULL; i++)
 		;
 	newenv = malloc(sizeof(char *) * (i + 2));
 	if (newenv == NULL)
 	{
-		print_error(vars, NULL);
-		vars->status = 127;
-		new_exit(vars);
+		print_error(var, NULL);
+		var->ext_status = 127;
+		new_exit(var);
 	}
-	for (i = 0; vars->env[i] != NULL; i++)
-		newenv[i] = vars->env[i];
-	newenv[i] = add_value(vars->av[1], vars->av[2]);
+	for (i = 0; var->env[i] != NULL; i++)
+		newenv[i] = var->env[i];
+	newenv[i] = add_value(var->av[1], var->av[2]);
 	if (newenv[i] == NULL)
 	{
-		print_error(vars, NULL);
-		free(vars->buffer);
-		free(vars->commands);
-		free(vars->av);
-		free_env(vars->env);
+		print_error(var, NULL);
+		free(var->buffer);
+		free(var->commands);
+		free(var->av);
+		free_env(var->env);
 		free(newenv);
 		exit(127);
 	}
 	newenv[i + 1] = NULL;
-	free(vars->env);
-	vars->env = newenv;
+	free(var->env);
+	var->env = newenv;
 }
 
 /**
- * find_key - finds an environment variable
+ * find_key - Entry Point
+ *
  * @env: array of environment variables
  * @key: environment variable to find
  *
+ * Description: finds an environment variable
+ *
  * Return: pointer to address of the environment variable
  */
+
 char **find_key(char **env, char *key)
 {
 	unsigned int i, j, len;
@@ -62,12 +70,16 @@ char **find_key(char **env, char *key)
 }
 
 /**
- * add_value - create a new environment variable string
+ * add_value - Entry Point
+ *
  * @key: variable name
  * @value: variable value
  *
+ * Description: creates a new environment variable string
+ *
  * Return: pointer to the new string;
  */
+
 char *add_value(char *key, char *value)
 {
 	unsigned int len1, len2, i, j;
@@ -88,11 +100,15 @@ char *add_value(char *key, char *value)
 }
 
 /**
- * _atoi - converts a string into an integer
+ * _atoi - Entry Point
+ *
  * @str: string to convert
+ *
+ * Description: Converts a string into an integer
  *
  * Return: the integer value, or -1 if an error occurs
  */
+
 int _atoi(char *str)
 {
 	unsigned int i, digits;
