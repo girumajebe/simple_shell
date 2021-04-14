@@ -137,4 +137,4 @@ Girum Ajebe | [GitHub](https://github.com/girumajebe)
 
 Peter Ngugi| [GitHub] (https://github.com/geshimore) 
 
-Nathan Mathewos | [GitHub] 
+Nathan Mathewos | [GitHub](https://github.com/nathanm5266)
