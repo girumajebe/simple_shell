@@ -1,4 +1,4 @@
-# <a href="url"><img src="https://www.cleanpng.com/png-computer-icons-computer-terminal-cmd-exe-command-t-1286500/preview.html" align="middle" width="100" height="100"></a> simple_shell
+#  simple_shell
 
 
 ## Table of Contents
