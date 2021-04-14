@@ -135,6 +135,6 @@ At this time, there are no known bugs.
 ## Authors
 Girum Ajebe | [GitHub](https://github.com/girumajebe)  
 
-Peter Ngugi| [GitHub] (https://github.com/geshimore) 
+Peter Ngugi | [GitHub](https://github.com/geshimore) 
 
 Nathan Mathewos | [GitHub](https://github.com/nathanm5266)
